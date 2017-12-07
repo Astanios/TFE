@@ -2,35 +2,39 @@ import React from 'react';
 import { connect } from "react-redux";
 import renderHTML from 'react-render-html';
 
-import { test } from '../requests';
+import { update } from '../reducers/resultsReducer';
 
 class Results extends React.Component{
-    componentWillMount(){
-        console.log(test());
+
+    createMarkup(){ 
+      return {__html: '<div class="ext">Hello!</div>'};
     }
+
+    
     render(){
         const {
             query
         } = this.props;
         return(
-            <div className="results">
-                {renderHTML(test().data)}
-                {
-                    query    
-                }
-            </div>
+          <div>
+
+                <div dangerouslySetInnerHTML={this.createMarkup()} >
+                </div>
+
+          </div>
         )
     }
 }
 
 const mS = state => {
   return {
-    query: state.results.query
+    query: state.results.query,
+    showExternalHTML: state.results.showExternalHTML    
   };
 };
 
 const mD = {
-
+  update
 };
 
 export default connect(mS, mD)(Results);

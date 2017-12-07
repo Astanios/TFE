@@ -25,7 +25,8 @@ const actions = {
   };
   
   const initialState = {
-      query: ""
+      query: "",
+      showExternalHTML: null
   };
   
   export const resultsReducer = (state = initialState, action) => {
