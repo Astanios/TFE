@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 
-import { update } from "../reducers/resultsReducer";
+import { update, submit } from "../reducers/resultsReducer";
 
 class SearchBar extends React.Component{
 
@@ -18,6 +18,7 @@ class SearchBar extends React.Component{
                 <input 
                     type = "submit"
                     onClick={() => {
+                        this.props.submit(this.refs.query.value);
                         update({
                         query: this.refs.query.value
                         });
@@ -30,12 +31,14 @@ class SearchBar extends React.Component{
 
 const mS = state => {
     return {
-        query: state.results.query        
+        query: state.results.query,
+        content: state.results.content,       
     };
   };
   
 const mD = {
-    update
+    update,
+    submit
 };
   
 export default connect(mS, mD)(SearchBar);

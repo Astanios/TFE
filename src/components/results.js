@@ -7,7 +7,7 @@ import { update } from '../reducers/resultsReducer';
 class Results extends React.Component{
 
     createMarkup(){ 
-      return {__html: '<div class="ext">Hello!</div>'};
+      return {__html: this.props.content};
     }
 
     
@@ -29,6 +29,7 @@ class Results extends React.Component{
 const mS = state => {
   return {
     query: state.results.query,
+    content: state.results.content,
     showExternalHTML: state.results.showExternalHTML    
   };
 };
