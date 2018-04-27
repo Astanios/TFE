@@ -5,17 +5,24 @@ import { connect } from "react-redux";
 import '../App.css';
 import SearchBar from '../components/searchBar';
 import Results from '../components/results';
+import Welcome from '../components/welcome';
 
 class MainContainer extends React.Component {
   render() {
+    const {
+      loading 
+    } = this.props;
     return (
       <div className="App">
         <div className="App-header">
-          <h2>AWV</h2>
           <SearchBar />
         </div>
         <div>
+          {loading ? 
           <Results />
+          :
+          <Welcome />
+          }
         </div>
       </div>
     );
@@ -23,7 +30,9 @@ class MainContainer extends React.Component {
 }
 
 const mS = state => {
-  return {};
+  return {
+    loading: state.results.loading,    
+  };
 };
 
 const mD = {};

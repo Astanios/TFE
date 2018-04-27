@@ -1,4 +1,4 @@
-import { test } from '../requests';
+import { test, jsontest } from '../requests';
 
 const actions = {
     create: "results/create",
@@ -43,6 +43,25 @@ export const submit = (query) => {
   }
 };
 
+export const submitjson = (query) => {
+  console.log(query);
+  return dispatch => {
+    jsontest(query).then(
+      response => {
+        console.log(response);
+        dispatch(
+          update({
+            content: response.data
+          })
+        );
+      },
+      error => {
+        console.log("error in request");
+      }
+    );
+  }
+};
+
 /*export const loadCourses = () => {
   return dispatch => {
     getCourses().then(
@@ -60,6 +79,7 @@ const initialState = {
     query: '',
     content: '<div class="ext">Hello!</div>',
     showExternalHTML: null,
+    loading: false,
 };
 
 export const resultsReducer = (state = initialState, action) => {
@@ -73,6 +93,11 @@ export const resultsReducer = (state = initialState, action) => {
       };
     case actions.clear:
       return initialState;
+    case actions.submit:
+      return {
+        ...state,
+        loading: true,
+      };
     default:
       return state;
   }
