@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -9,15 +8,10 @@
 
 .App-header {
   background-color: #222;
-  height: 1.5rem;
+  height: 2.5rem;
   padding: 1rem;
   color: white;
-  transition: 1s;
-}
-
-.App-header:hover{
-  height: 2rem;
-  padding: 3rem;  
+  box-shadow: 5px 10px 50px #777;
 }
 
 .App-intro {
@@ -26,13 +20,41 @@
 
 .App-bar {
   display: block;
+  text-align: center;  
+}
+
+.App-welcome{
+  text-align: center;  
 }
 
 .App-header:hover + .App-bar {
 	display: block;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.App-logo {
+  height: 3rem;
+  position: relative;
+  float: left;
+}
+
+.App-submit{
+  background-color: #3377bb;
+  border: 2px solid #3377bb;
+  color:white;
+  font-weight: bolder;
+  width: 2rem;
+  height: auto;
+}
+
+.App-img{
+  margin: 2rem;
+}
+
+.App-link{
+  color: blue;
+  text-decoration: underline;
+}
+
+.App-results{
+  width: 100%;
 }

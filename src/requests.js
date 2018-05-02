@@ -11,9 +11,6 @@ const AXIOS = axios.create({
   timeout: 5000,
 })
 
-const config = {
-  headers: {'Content-Type': 'application/json'}
-};
-
 export const test = query => AXIOS.get('api/');
-export const jsontest = query => AXIOS.post('json/', query, config);
+export const jsontest = query => AXIOS.post('json/', query);
+export const sitereq = query => AXIOS.post('site/', query);

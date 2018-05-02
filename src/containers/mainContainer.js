@@ -10,7 +10,7 @@ import Welcome from '../components/welcome';
 class MainContainer extends React.Component {
   render() {
     const {
-      loading 
+      welcome 
     } = this.props;
     return (
       <div className="App">
@@ -18,10 +18,10 @@ class MainContainer extends React.Component {
           <SearchBar />
         </div>
         <div>
-          {loading ? 
-          <Results />
+          {welcome ?
+            <Welcome />
           :
-          <Welcome />
+            <Results />          
           }
         </div>
       </div>
@@ -31,7 +31,7 @@ class MainContainer extends React.Component {
 
 const mS = state => {
   return {
-    loading: state.results.loading,    
+    welcome: state.results.welcome,
   };
 };
 

@@ -1,4 +1,4 @@
-import { test, jsontest } from '../requests';
+import { test, jsontest, sitereq } from '../requests';
 
 const actions = {
     create: "results/create",
@@ -46,12 +46,32 @@ export const submit = (query) => {
 export const submitjson = (query) => {
   console.log(query);
   return dispatch => {
-    jsontest(query).then(
+    jsontest(JSON.stringify(query)).then(
       response => {
         console.log(response);
         dispatch(
           update({
-            content: response.data
+            content: response.data,
+            welcome: false,
+          })
+        );
+      },
+      error => {
+        console.log("error in request");
+      }
+    );
+  }
+};
+
+export const site = (query) => {
+  console.log(query);
+  return dispatch => {
+    sitereq(JSON.stringify(query)).then(
+      response => {
+        console.log(response);
+        dispatch(
+          update({
+            html: response.data,
           })
         );
       },
@@ -77,9 +97,10 @@ export const submitjson = (query) => {
 
 const initialState = {
     query: '',
-    content: '<div class="ext">Hello!</div>',
+    content: {},
     showExternalHTML: null,
-    loading: false,
+    welcome: true,
+    html: '',
 };
 
 export const resultsReducer = (state = initialState, action) => {
@@ -93,11 +114,6 @@ export const resultsReducer = (state = initialState, action) => {
       };
     case actions.clear:
       return initialState;
-    case actions.submit:
-      return {
-        ...state,
-        loading: true,
-      };
     default:
       return state;
   }
