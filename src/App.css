@@ -58,3 +58,8 @@
 .App-results{
   width: 100%;
 }
+
+.App-text{
+  text-align: justify;
+  padding: 0 4rem;
+}
