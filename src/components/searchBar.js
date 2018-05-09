@@ -13,28 +13,22 @@ class SearchBar extends React.Component {
     } = this.props;
     return (
       <div className="App-bar">
-				<img
-          className="App-logo"
-          src={ logoHeader }
+        <input
+          type="text"
+          ref="query"
         />
-        <div className="">
-          <input
-            type="text"
-            ref="query"
-          />
-          <button
-            type="submit"
-            onClick={() => {
-              this.props.submitjson({ 'query': this.refs.query.value });
-              update({
-                query: this.refs.query.value
-              });
-            }}
-            className="App-submit"
-          >
-          >
-          </button>
-        </div>
+        <button
+          type="submit"
+          onClick={() => {
+            this.props.submitjson({ 'query': this.refs.query.value });
+            update({
+              query: this.refs.query.value
+            });
+          }}
+          className="App-submit"
+        >
+        >
+        </button>
       </div>
     )
   }

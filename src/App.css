@@ -1,4 +1,11 @@
 .App {
+  margin: 2rem 4rem;
+}
+.App-about {
+  margin: 4rem 4rem;
+}
+.App-about p{
+  margin: 2rem 4rem;
 }
 
 .App-logo {
@@ -12,6 +19,9 @@
   padding: 1rem;
   color: white;
   box-shadow: 5px 10px 50px #777;
+  display: flex;
+  align-content: row;
+  justify-content: space-around
 }
 
 .App-intro {
@@ -19,16 +29,12 @@
 }
 
 .App-bar {
-  display: block;
   text-align: center;  
 }
 
-.App-welcome{
-  text-align: center;  
-}
-
-.App-header:hover + .App-bar {
-	display: block;
+.App-welcome{  
+  display: flex;
+  justify-content: space-around;
 }
 
 .App-logo {
@@ -46,8 +52,17 @@
   height: auto;
 }
 
+.App-imgWrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+}
+
 .App-img{
-  margin: 2rem;
+  height: 10rem;
+  width: auto;
+  margin: 1rem;
 }
 
 .App-link{
@@ -62,4 +77,14 @@
 .App-text{
   text-align: justify;
   padding: 0 4rem;
+  width: 40rem;
+}
+
+.App-text h1{
+  border-bottom: 1px solid #777;
+  padding: 1rem;
+}
+
+.App-link{
+  margin-top: 1rem; 
 }

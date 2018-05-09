@@ -14,16 +14,11 @@ class MainContainer extends React.Component {
     } = this.props;
     return (
       <div className="App">
-        <div className="App-header">
-          <SearchBar />
-        </div>
-        <div>
-          {welcome ?
-            <Welcome />
-          :
-            <Results />          
-          }
-        </div>
+        {welcome ?
+          <Welcome />
+        :
+          <Results />          
+        }
       </div>
     );
   }

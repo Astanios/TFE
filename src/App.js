@@ -10,6 +10,7 @@ import { ConnectedRouter } from 'react-router-redux'
 
 import MainContainer from "./containers/mainContainer";
 import AboutContainer from "./containers/aboutContainer";
+import Header from "./containers/header";
 
 const history = createHistory()
 const store = require("./store/configureStore").configure();
@@ -21,6 +22,7 @@ class App extends React.Component {
         { /* ConnectedRouter will use the store from Provider automatically */ }
         <ConnectedRouter history={history}>
           <div>
+            <Header />
             <Route exact path="/" component={MainContainer}/>
             <Route path="/about" component={AboutContainer}/>
           </div>
