@@ -3,13 +3,14 @@ import createHistory from 'history/createBrowserHistory'
 import { Provider } from 'react-redux'
 import { 
   Route,
-  IndexRoute,
   Redirect
 } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 
 import MainContainer from "./containers/mainContainer";
 import AboutContainer from "./containers/aboutContainer";
+import ContactContainer from "./containers/contactContainer";
+import SessionContainer from "./containers/sessionContainer";
 import Header from "./containers/header";
 
 const history = createHistory()
@@ -25,6 +26,8 @@ class App extends React.Component {
             <Header />
             <Route exact path="/" component={MainContainer}/>
             <Route path="/about" component={AboutContainer}/>
+            <Route path="/contact" component={ContactContainer}/>
+            <Route path="/login" component={SessionContainer}/>
           </div>
         </ConnectedRouter>
       </Provider>

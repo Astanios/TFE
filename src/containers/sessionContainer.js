@@ -1,11 +1,23 @@
 import React from "react";
 import { connect } from "react-redux";
 
-class contentContainer extends React.Component {
+class SessionContainer extends React.Component {
   render() {
     return (
-      <div>
-        <p>About Container</p>
+      <div className="App-session">
+        <div className="App-login">
+          <h1>Inicia sesión</h1>                
+          <input type="text" placeholder="Nombre" />
+          <input type="password" placeholder="Contraseña"/>
+          <input type="submit"/>
+        </div>
+        <div className="App-sign">
+          <h1>Regístrate</h1>                
+          <input type="text" placeholder="Nombre"/>
+          <input type="email" placeholder="Email"/>
+          <input type="password" placeholder="Contraseña"/>
+          <input type="submit" />
+        </div>
       </div>
     );
   }
@@ -17,4 +29,4 @@ const mS = state => {
 
 const mD = {};
 
-export default connect(mS, mD)(contentContainer);
+export default connect(mS, mD)(SessionContainer);

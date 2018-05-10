@@ -17,19 +17,22 @@ class Welcome extends React.Component {
 					<img
 					className="App-img"
 					src={ logo }
+					alt="Logo del Archivo Web"
 					/>
 					<img
 					className="App-img"
 					src={ ucvlogo }
+					alt="Logo del UCV"					
 					/>
 					<img
 					className="App-img"
 					src={ cienciaslogo }
+					alt="Logo de la Facultad de Ciencias"					
 					/>
 				</div>
 
 				<div className="App-text">
-					<h1>Archivo Web de Venezuela</h1>				
+					<h1 className="App-title">Archivo Web de Venezuela</h1>				
 					<p>Bienvenido, en este portal usted podrá acceder a los sitios web que han sido archivados en el Archivo Web de Venezuela</p>
 					<p>El proyecto del Archivo Web de Venezuela es una iniciativa desarrollada por la profesora Mercy Ospina, en la Facultad de Ciencias de la Universidad Central de Venezuela</p>
 					<nav>

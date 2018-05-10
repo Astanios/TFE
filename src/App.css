@@ -80,11 +80,49 @@
   width: 40rem;
 }
 
-.App-text h1{
+.App-title{
   border-bottom: 1px solid #777;
   padding: 1rem;
+  text-align: center;
 }
 
 .App-link{
   margin-top: 1rem; 
+}
+
+.App-contact{
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 4rem;  
+  height: 100%;
+}
+
+.App-session{
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 4rem;
+  height: 100%;
+}
+
+.App-login{
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #777;
+  padding: 3rem;
+}
+
+.App-sign{
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;  
+}
+
+.App-login input, .App-sign input, .App-contact input{
+  margin: .5rem;
+  height: 2rem;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #777;
 }

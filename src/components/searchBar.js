@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 
 import { update, submit, submitjson } from "../reducers/resultsReducer";
 import '../App.css';
-import logoHeader from '../img/awv_logo_header.png';
 
 class SearchBar extends React.Component {
 
