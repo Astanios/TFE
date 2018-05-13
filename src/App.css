@@ -18,10 +18,29 @@
   height: 2.5rem;
   padding: 1rem;
   color: white;
-  box-shadow: 5px 10px 50px #777;
   display: flex;
   align-content: row;
   justify-content: space-around
+}
+
+.App-subheader{
+  bottom: 0;
+  width: 100%;
+  min-height: 366px;
+  background: #6c7663 url(./img/bg_search.jpg) 55px bottom no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+  box-shadow: 5px 10px 50px #777;  
+  text-align: center;
+  padding-top: .3rem;
+  color: #fff;  
+}
+
+.App-header nav a{
+  text-decoration: none;  
+  color: #fff;
+  margin: 0 1rem;
+  font-size: .75rem;
 }
 
 .App-intro {
