@@ -8,17 +8,6 @@
   margin: 2rem 4rem;
 }
 
-.App-tab-title{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333; 
-}
-
-.App-tab-title li{
-  float: left;
-}
 .App-logo {
   height: 80px;
   margin-top: 1rem;
@@ -29,6 +18,7 @@
   background-size: 130% 200%;
   background-position-x: 0;
   background-position-y: -7rem;
+  overflow: hidden;
 }
 
 .App-upperheader {
@@ -60,16 +50,16 @@
   width: 24rem;
   display: flex;
   justify-content: space-around;
-
+  
 }
 
 .App-upperheader-menu a{
-  transition: 0.3s;    
+  transition: 0.3s;
 }
 
 .App-upperheader-menu a:hover{
   font-weight: bolder;
-  font-size: 1rem
+  font-size: 1rem;
 }
 
 .App-subheader{
@@ -154,21 +144,23 @@
 .App-img img{
   height: 10rem;
   width: auto;
+  opacity: .2;
 }
 
 .App-img span{
   position: relative;
   float: left;
-  top: -11rem;
-  background: rgba(37, 52, 91, 0.37);
+  top: -10.7rem;
+  background: rgba(129, 130, 133, 0.336);
   height: 100%;
   width: 100%;
-  color: #fff;
+  color: rgb(37, 52, 91);
   vertical-align: middle;
   padding-top: 4rem;
   font-weight: bolder;
   text-transform: uppercase;
 }
+
 
 .App-img img:hover + span {
   color: red;
@@ -247,6 +239,13 @@
   border-bottom: 1px solid #25345B;
 }
 
+.App-tabs li {
+  list-style-type: none;
+  color: #25345B;
+  padding: .5rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
 @keyframes lds-spinner {
   0% {
     opacity: 1;
@@ -356,20 +355,4 @@
   height: 200px !important;
   -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
   transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
-}
-
-.demo0 {
-  border-radius: 4px;
-  background-color: rgb(240, 240, 232);
-  position: relative;
-  margin: 5px 3px 10px;
-  width: 450px;
-  height: 50px;
-}
-.demo0-block {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 4px;
-  background-color: rgb(130, 181, 198);
 }

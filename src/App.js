@@ -3,7 +3,7 @@ import createHistory from 'history/createBrowserHistory'
 import { Provider } from 'react-redux'
 import { 
   Route,
-  Redirect
+  //Redirect
 } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 

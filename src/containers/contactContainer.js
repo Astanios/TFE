@@ -1,7 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { update } from '../reducers/resultsReducer';
+
 class ContactContainer extends React.Component {
+  componentWillMount(){
+    this.props.update({header: false});
+  }
+
   render() {
     return (
       <div className="App-contact">
@@ -21,6 +27,8 @@ const mS = state => {
   return {};
 };
 
-const mD = {};
+const mD = {
+  update,
+};
 
 export default connect(mS, mD)(ContactContainer);

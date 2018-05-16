@@ -1,7 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { update } from '../reducers/resultsReducer';
+
 class SessionContainer extends React.Component {
+  componentWillMount(){
+    this.props.update({header: false});
+  }
   render() {
     return (
       <div className="App-session">
@@ -27,6 +32,8 @@ const mS = state => {
   return {};
 };
 
-const mD = {};
+const mD = {
+  update,
+};
 
 export default connect(mS, mD)(SessionContainer);

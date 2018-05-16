@@ -1,19 +1,32 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
+import { update } from '../reducers/resultsReducer';
+
+
 class contentContainer extends React.Component {
+  componentWillMount(){
+    this.props.update({header: false});
+  }
   render() {
     return (
       <div className="App-about">
         <Tabs>
-          <TabList
-            className=".App-tab-title"
-          >
-            <Tab>¿Qué es?</Tab>
-            <Tab>Equipo</Tab>
-            <Tab>Trabajos Relacionados</Tab>
+          <TabList className="App-tabs" style={{
+            display: "flex",
+            justifyContent: "space-between",
+            borderBottom: "2px solid #25345B",
+          }} >
+            <Tab>
+              ¿Qué es?
+            </Tab>
+            <Tab>
+              Equipo
+            </Tab>
+            <Tab>
+              Trabajos Relacionados
+            </Tab>
           </TabList>
 
           <TabPanel>
@@ -54,6 +67,8 @@ const mS = state => {
   return {};
 };
 
-const mD = {};
+const mD = {
+  update
+};
 
 export default connect(mS, mD)(contentContainer);

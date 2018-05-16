@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 
 //import logo from '../logo.svg';
 import '../App.css';
-import SearchBar from '../components/searchBar';
 import Results from '../components/results';
 import Welcome from '../components/welcome';
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { update, submit, submitjson } from "../reducers/resultsReducer";
 import '../App.css';
@@ -14,26 +15,29 @@ class SearchBar extends React.Component {
     } = this.props;
     return (
       <div className="App-bar"
-      
-      onMouseDown={mouseDown}
-      onTouchStart={touchStart}
       >
         <input
           type="text"
           ref="query"
         />
-        <button
-          type="submit"
-          onClick={() => {
-            this.props.submitjson({ 'query': this.refs.query.value });
-            update({
-              query: this.refs.query.value
-            });
-          }}
-          className="App-submit"
+        <Link
+          to={'/'}
         >
-          Buscar
-        </button>
+          <button
+            type="submit"
+            onClick={() => {
+              this.props.submitjson({ 'query': this.refs.query.value });
+              update({
+                query: this.refs.query.value
+              });
+              mouseDown();
+            }}
+            onTouchStart={touchStart}
+            className="App-submit"
+          >
+            Buscar
+          </button>
+        </Link>
       </div>
     )
   }

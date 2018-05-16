@@ -6,7 +6,6 @@ import {Motion, spring} from 'react-motion';
 import '../App.css';
 import SearchBar from '../components/searchBar';
 import logoHeader from '../img/awv_logo_header.png';
-import bgsearch from '../img/bg_search.jpg';
 import { clear, update } from "../reducers/resultsReducer";
 
 class Header extends React.Component {
@@ -15,7 +14,8 @@ class Header extends React.Component {
 			update,
 			header,
 		} = this.props;
-		update({header: false});
+		if (header)
+			update({header: false});
 	};
 
 	handleTouchStart = (e) => {
@@ -39,32 +39,26 @@ class Header extends React.Component {
 							src={ logoHeader }
 							onClick={
 								() =>{
-									console.log("clear");
 									clear();
 								}
 							}
+							alt="Logo AWV"
 						/>
 					</Link>
 					<nav
 						className="App-upperheader-menu"
 					>
-						<Link
-							onMouseDown={this.handleMouseDown}
-							onTouchStart={this.handleTouchStart}							
+						<Link							
 							to={'/about'}
 						>
 							¿Quiénes somos?
 						</Link>
 						<Link
-							onMouseDown={this.handleMouseDown}
-							onTouchStart={this.handleTouchStart}	
-							to={'/contact'}				
+							to={'/contact'}
 						>
 							Contacto
 						</Link>
 						<Link
-							onMouseDown={this.handleMouseDown}
-							onTouchStart={this.handleTouchStart}	
 							to={'/login'}					
 						>
 							Iniciar sesión

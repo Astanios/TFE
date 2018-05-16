@@ -11,7 +11,6 @@ class Results extends React.Component {
   render() {
     const {
       content,
-      site,
       html,
     } = this.props;
     return (

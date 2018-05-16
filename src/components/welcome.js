@@ -12,7 +12,6 @@ class Welcome extends React.Component {
 	render() {
 		return (
 			<div className="App-welcome">
-				
 				<div className="App-imgWrapper">
 					<Link
 					to={'/about'}
@@ -21,24 +20,33 @@ class Welcome extends React.Component {
 							<img
 							src={ logo }
 							alt="Logo del Archivo Web"
-							/>
-							<span>Archivo Wed de Venezuela</span>
+						/>
+							<span>Archivo Web de Venezuela</span>
 						</div>
 					</Link>
-					<div className="App-img">
-						<img
-						src={ ucvlogo }
-						alt="Logo del UCV"					
-						/>
-						<span>Universidad Central de Venezuela</span>						
-					</div>
-					<div className="App-img">
-						<img
-						src={ cienciaslogo }
-						alt="Logo de la Facultad de Ciencias"					
-						/>
-						<span>Facultad de Ciencias UCV</span>						
-					</div>
+					<a
+					href='http://www.ucv.ve/'
+					>
+						<div className="App-img">
+							<img
+							src={ ucvlogo }
+							alt="Logo del UCV"					
+							/>
+							<span>Universidad Central de Venezuela</span>						
+						</div>
+					</a>
+					<a
+					href='http://www.ciens.ucv.ve/ciens/'
+					>
+						<div className="App-img">
+							<img
+							src={ cienciaslogo }
+							alt="Logo de la Facultad de Ciencias"					
+							/>
+							<span>Facultad de Ciencias UCV</span>						
+						</div>
+					</a>
+					
 				</div>
 			</div>
 		)
@@ -51,6 +59,7 @@ const mS = state => {
 };
 
 const mD = {
+	update
 };
 
 export default connect(mS, mD)(Welcome);
