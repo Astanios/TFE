@@ -1,6 +1,6 @@
-import React from "react";
-import { connect } from "react-redux";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import React from 'react';
+import { connect } from 'react-redux';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import { update } from '../reducers/resultsReducer';
 
@@ -11,12 +11,12 @@ class contentContainer extends React.Component {
   }
   render() {
     return (
-      <div className="App-about">
+      <div className='App-about'>
         <Tabs>
-          <TabList className="App-tabs" style={{
-            display: "flex",
-            justifyContent: "space-between",
-            borderBottom: "2px solid #25345B",
+          <TabList className='App-tabs' style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            borderBottom: '2px solid #25345B',
           }} >
             <Tab>
               ¿Qué es?
@@ -30,9 +30,9 @@ class contentContainer extends React.Component {
           </TabList>
 
           <TabPanel>
-          <div className="App-text">
+          <div className='App-text'>
               <h2
-                className="App-title"
+                className='App-title'
               >
                 Archivo Web de Venezuela
               </h2>
@@ -42,9 +42,9 @@ class contentContainer extends React.Component {
               <p>En un aspecto académico, el propósito de ésto es que haga la función de módulo de acceso para el primer Archivo Web de Venezuela</p>
             </div>
             
-            <div className="App-text">
+            <div className='App-text'>
               <h2
-                className="App-title"        
+                className='App-title'        
               >
                 Motivación
               </h2>            
