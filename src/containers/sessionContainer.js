@@ -6,13 +6,13 @@ class SessionContainer extends React.Component {
     return (
       <div className="App-session">
         <div className="App-login">
-          <h1>Inicia sesión</h1>                
+          <h1 className="App-title">Inicia sesión</h1>                
           <input type="text" placeholder="Nombre" />
           <input type="password" placeholder="Contraseña"/>
           <input type="submit"/>
         </div>
         <div className="App-sign">
-          <h1>Regístrate</h1>                
+          <h1 className="App-title">Regístrate</h1>                
           <input type="text" placeholder="Nombre"/>
           <input type="email" placeholder="Email"/>
           <input type="password" placeholder="Contraseña"/>

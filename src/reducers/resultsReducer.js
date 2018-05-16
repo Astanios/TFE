@@ -101,6 +101,8 @@ const initialState = {
     showExternalHTML: null,
     welcome: true,
     html: '',
+    loading: false,
+    header: true,
 };
 
 export const resultsReducer = (state = initialState, action) => {

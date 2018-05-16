@@ -8,10 +8,16 @@ class SearchBar extends React.Component {
 
   render() {
     const {
-      update
+      update,
+      mouseDown,
+      touchStart,
     } = this.props;
     return (
-      <div className="App-bar">
+      <div className="App-bar"
+      
+      onMouseDown={mouseDown}
+      onTouchStart={touchStart}
+      >
         <input
           type="text"
           ref="query"
@@ -26,7 +32,7 @@ class SearchBar extends React.Component {
           }}
           className="App-submit"
         >
-        >
+          Buscar
         </button>
       </div>
     )

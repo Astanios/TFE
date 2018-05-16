@@ -1,39 +1,90 @@
-.App {
-  margin: 2rem 4rem;
+.App, .App-about, App-session, .App-contact{
+  padding: 2rem 4rem;
+  background-color: #e9edf0;
+  height: 100%;
 }
-.App-about {
-  margin: 4rem 4rem;
-}
+
 .App-about p{
   margin: 2rem 4rem;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App-tab-title{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333; 
 }
 
-.App-header {
+.App-tab-title li{
+  float: left;
+}
+.App-logo {
+  height: 80px;
+  margin-top: 1rem;
+}
+
+.App-header{
+  background: #6c7663 url(./img/header-bg.jpg) 55px bottom no-repeat;
+  background-size: 130% 200%;
+  background-position-x: 0;
+  background-position-y: -7rem;
+}
+
+.App-upperheader {
   background-color: #222;
   height: 2.5rem;
-  padding: 1rem;
-  color: white;
+  vertical-align: middle;
+  min-height: 4.5rem;
+  color: #fff;
   display: flex;
   align-content: row;
-  justify-content: space-around
+  justify-content: space-around;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.App-upperheader:hover{
+  opacity: 0.9;
+}
+
+.App-upperheader-menu{
+  vertical-align: middle;
+  position: relative;
+  padding-top: .5rem;
+  border: 1px solid #333;
+  border-radius: 0px 0 50px 50px;
+  padding: 1.5rem;
+  border-style: none;
+  background-color: #193a5c;
+  width: 24rem;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.App-upperheader-menu a{
+  transition: 0.3s;    
+}
+
+.App-upperheader-menu a:hover{
+  font-weight: bolder;
+  font-size: 1rem
 }
 
 .App-subheader{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   bottom: 0;
-  width: 100%;
-  min-height: 366px;
-  background: #6c7663 url(./img/bg_search.jpg) 55px bottom no-repeat;
-  background-size: cover;
-  text-transform: uppercase;
-  box-shadow: 5px 10px 50px #777;  
   text-align: center;
-  padding-top: .3rem;
+  padding: 1.5rem 4rem;
   color: #fff;  
+}
+
+.App-subheader-message{
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .App-header nav a{
@@ -51,9 +102,9 @@
   text-align: center;  
 }
 
-.App-welcome{  
-  display: flex;
-  justify-content: space-around;
+.App-bar input{
+  width: 40rem;
+  height: 2rem;
 }
 
 .App-logo {
@@ -64,29 +115,69 @@
 
 .App-submit{
   background-color: #3377bb;
-  border: 2px solid #3377bb;
+  border: none;
   color:white;
   font-weight: bolder;
-  width: 2rem;
+  width: auto;
   height: auto;
+  text-transform: uppercase;
+  height: 2.4rem;  
+}
+
+.App-welcome{  
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .App-imgWrapper{
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  width: 15rem;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+  color: #4d4d4d;
+  background-color: #dcdfe0;
+  border-radius: 10px; 
+  margin-top: 2rem;
 }
 
 .App-img{
   height: 10rem;
-  width: auto;
+  width: 10rem;
   margin: 1rem;
+  position: relative;
+  border: 4px solid #fff;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.App-img img{
+  height: 10rem;
+  width: auto;
+}
+
+.App-img span{
+  position: relative;
+  float: left;
+  top: -11rem;
+  background: rgba(37, 52, 91, 0.37);
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  vertical-align: middle;
+  padding-top: 4rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.App-img img:hover + span {
+  color: red;
+  
 }
 
 .App-link{
-  color: blue;
-  text-decoration: underline;
+  text-decoration: none;
+  color: #25345B;
 }
 
 .App-results{
@@ -95,31 +186,35 @@
 
 .App-text{
   text-align: justify;
-  padding: 0 4rem;
-  width: 40rem;
+  padding: 2rem 4rem;
+  color: #4d4d4d;
+  background-color: #dcdfe0;
+  border-radius: 10px;
+  margin: 2rem 0;
 }
 
 .App-title{
-  border-bottom: 1px solid #777;
-  padding: 1rem;
+  padding: 0 0 1rem 0;
   text-align: center;
+  color: #25345B;
 }
 
 .App-link{
-  margin-top: 1rem; 
+  margin-top: 1rem;
+  color: rgb(49, 94, 216);   
 }
 
 .App-contact{
   display: flex;
   flex-direction: column;
-  margin: 4rem 4rem;  
   height: 100%;
 }
 
 .App-session{
   display: flex;
   justify-content: space-between;
-  margin: 4rem 4rem;
+  background-color: #e9edf0 !important;  
+  padding: 4rem 4rem;
   height: 100%;
 }
 
@@ -127,21 +222,154 @@
   width: 20rem;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #777;
   padding: 3rem;
+  color: #4d4d4d ;
+  background-color: #dcdfe0 ;
+  border-radius: 10px;
 }
 
 .App-sign{
   width: 30rem;
   display: flex;
   flex-direction: column;
-  padding: 3rem;  
+  padding: 3rem;
+  color: #4d4d4d ;
+  background-color: #dcdfe0 ;
+  border-radius: 10px;
 }
 
 .App-login input, .App-sign input, .App-contact input{
   margin: .5rem;
   height: 2rem;
   font-size: 1rem;
+  padding: 0 .5rem;
   border: none;
-  border-bottom: 1px solid #777;
+  border-bottom: 1px solid #25345B;
+}
+
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.lds-spinner {
+  position: relative;
+}
+.lds-spinner div {
+  left: 94px;
+  top: 48px;
+  position: absolute;
+  -webkit-animation: lds-spinner linear 1s infinite;
+  animation: lds-spinner linear 1s infinite;
+  background: #ccccc7;
+  width: 12px;
+  height: 24px;
+  border-radius: 40%;
+  -webkit-transform-origin: 6px 52px;
+  transform-origin: 6px 52px;
+}
+.lds-spinner div:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-animation-delay: -0.916666666666667s;
+  animation-delay: -0.916666666666667s;
+}
+.lds-spinner div:nth-child(2) {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-animation-delay: -0.833333333333333s;
+  animation-delay: -0.833333333333333s;
+}
+.lds-spinner div:nth-child(3) {
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+  -webkit-animation-delay: -0.75s;
+  animation-delay: -0.75s;
+}
+.lds-spinner div:nth-child(4) {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-animation-delay: -0.666666666666667s;
+  animation-delay: -0.666666666666667s;
+}
+.lds-spinner div:nth-child(5) {
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+  -webkit-animation-delay: -0.583333333333333s;
+  animation-delay: -0.583333333333333s;
+}
+.lds-spinner div:nth-child(6) {
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(7) {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-animation-delay: -0.416666666666667s;
+  animation-delay: -0.416666666666667s;
+}
+.lds-spinner div:nth-child(8) {
+  -webkit-transform: rotate(210deg);
+  transform: rotate(210deg);
+  -webkit-animation-delay: -0.333333333333333s;
+  animation-delay: -0.333333333333333s;
+}
+.lds-spinner div:nth-child(9) {
+  -webkit-transform: rotate(240deg);
+  transform: rotate(240deg);
+  -webkit-animation-delay: -0.25s;
+  animation-delay: -0.25s;
+}
+.lds-spinner div:nth-child(10) {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  -webkit-animation-delay: -0.166666666666667s;
+  animation-delay: -0.166666666666667s;
+}
+.lds-spinner div:nth-child(11) {
+  -webkit-transform: rotate(300deg);
+  transform: rotate(300deg);
+  -webkit-animation-delay: -0.083333333333333s;
+  animation-delay: -0.083333333333333s;
+}
+.lds-spinner div:nth-child(12) {
+  -webkit-transform: rotate(330deg);
+  transform: rotate(330deg);
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.lds-spinner {
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
+
+.demo0 {
+  border-radius: 4px;
+  background-color: rgb(240, 240, 232);
+  position: relative;
+  margin: 5px 3px 10px;
+  width: 450px;
+  height: 50px;
+}
+.demo0-block {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: rgb(130, 181, 198);
 }

@@ -10,14 +10,20 @@ import Welcome from '../components/welcome';
 class MainContainer extends React.Component {
   render() {
     const {
-      welcome 
+      welcome,
+      loading,
     } = this.props;
     return (
       <div className="App">
-        {welcome ?
-          <Welcome />
+        {loading ?
+          <div className="lds-css ng-scope">
+            <div className="lds-spinner" style={{height:"100%"}}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          </div>
         :
-          <Results />          
+          welcome ?
+            <Welcome />
+          :
+            <Results /> 
         }
       </div>
     );
@@ -27,6 +33,7 @@ class MainContainer extends React.Component {
 const mS = state => {
   return {
     welcome: state.results.welcome,
+    loading: state.results.loading,
   };
 };
 
