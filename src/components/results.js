@@ -1,11 +1,18 @@
 import React from 'react';
 import { connect } from "react-redux";
 import renderHTML from 'react-render-html';
+import Calendar from 'react-calendar';
 
 import { update, site } from '../reducers/resultsReducer';
 
 class Results extends React.Component {
-  createMarkup() {
+  state = {
+    date: new Date(),
+  }
+
+  onChange = date => this.setState({ date })
+  
+  reateMarkup() {
     return { __html: this.props.content };
   }
   render() {
@@ -15,6 +22,10 @@ class Results extends React.Component {
     } = this.props;
     return (
       <div className="App-results">
+        <Calendar
+          onChange={this.onChange}
+          value={this.state.date}
+        />
         <h1>Site: <b>{content.url}</b></h1>
         <h4>Versions: {content.versions}</h4>
         <ul>

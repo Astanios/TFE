@@ -12,6 +12,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
     "react": "^16.0.0",
+    "react-calendar": "^2.14.0",
     "react-dom": "^16.0.0",
     "react-motion": "^0.5.2",
     "react-redux": "^5.0.6",
