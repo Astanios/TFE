@@ -95,6 +95,15 @@
 .App-bar input{
   width: 40rem;
   height: 2rem;
+  background-color: rgba(129, 130, 133, 0.582);
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #193a5c;
+  border-right: none;
+  padding-left: .4rem;
+  font-size: 1rem;
+  border-radius: 20px 0 0 20px;
+  text-align: center;
 }
 
 .App-logo {
@@ -104,14 +113,15 @@
 }
 
 .App-submit{
-  background-color: #3377bb;
+  background-color: #193a5c;
   border: none;
-  color:white;
+  color:#fff;
   font-weight: bolder;
   width: auto;
   height: auto;
   text-transform: uppercase;
-  height: 2.4rem;  
+  height: 2.4rem;
+  border-radius: 0 20px 20px 0;  
 }
 
 .App-welcome{  
@@ -169,7 +179,7 @@
 
 .App-link{
   text-decoration: none;
-  color: #25345B;
+  color: #193a5c;
 }
 
 .App-results{
@@ -181,14 +191,14 @@
   padding: 2rem 4rem;
   color: #4d4d4d;
   background-color: #dcdfe0;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 2rem 0;
 }
 
 .App-title{
   padding: 0 0 1rem 0;
   text-align: center;
-  color: #25345B;
+  color: #193a5c;
 }
 
 .App-link{
@@ -236,15 +246,22 @@
   font-size: 1rem;
   padding: 0 .5rem;
   border: none;
-  border-bottom: 1px solid #25345B;
+  border-bottom: 1px solid #193a5c;
 }
 
 .App-tabs li {
   list-style-type: none;
-  color: #25345B;
+  color: #193a5c;
   padding: .5rem;
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+.react-tabs__tab--selected{
+  background-color: #193a5c;
+  color: #fff !important;
+  border-radius: 10px;
+  margin: .3rem;
 }
 @keyframes lds-spinner {
   0% {
