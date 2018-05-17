@@ -10,8 +10,6 @@ class SearchBar extends React.Component {
   render() {
     const {
       update,
-      mouseDown,
-      touchStart,
     } = this.props;
     return (
       <div className="App-bar"
@@ -28,11 +26,10 @@ class SearchBar extends React.Component {
             onClick={() => {
               this.props.submitjson({ 'query': this.refs.query.value });
               update({
-                query: this.refs.query.value
+                query: this.refs.query.value,
+                header: false,
               });
-              mouseDown();
             }}
-            onTouchStart={touchStart}
             className="App-submit"
           >
             Buscar

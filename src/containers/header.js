@@ -84,10 +84,7 @@ class Header extends React.Component {
 										En nuestro archivo hay almacenadas múltiples páginas de origen venezolano, siéntete libre de explorar:
 									</p>
 							</div>
-							<SearchBar
-								mouseDown={this.handleMouseDown}
-								touchStart={this.handleTouchStart}
-							/>
+							<SearchBar />
 						</div>
 					}
 		  		</Motion>
