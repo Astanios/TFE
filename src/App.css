@@ -1,3 +1,56 @@
+@font-face {
+  font-family: ModernSans;
+  src: url(./fonts/Modern_Sans_Light.otf);
+}
+@font-face {
+  font-family: TallDark;
+  src: url(./fonts/talldark.ttf);
+}
+@font-face {
+  font-family: Minimal;
+  src: url(./fonts/minimal.otf);
+}
+@font-face {
+  font-family: LouisGeorge;
+  src: url(./fonts/louis_george_caf/LouisGeorgeCafe.ttf);
+}
+@font-face {
+  font-family: LouisGeorgeBold;
+  src: url(./fonts/louis_george_caf/LouisGeorgeCafeBold.ttf);
+}
+@font-face {
+  font-family: Existence;
+  src: url(./fonts/existence/Existence-Light.ttf);
+}
+@font-face {
+  font-family: BebasNeue;
+  src: url(./fonts/bebas_neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: TypoGrotesk;
+  src: url(./fonts/typo_grotesk/TypoGroteskThinDemo.otf);
+}
+@font-face {
+  font-family: TypoGrotesk;
+  src: url(./fonts/typo_grotesk/TypoGroteskThinDemo.otf);
+}
+
+@font-face {
+  font-family: Cinematografica;
+  src: url(./fonts/cinematografica/Cinematografica-Light-trial.ttf);
+}
+@font-face {
+  font-family: Generica;
+  src: url(./fonts/generica/Generica.otf);
+}
+
+* {
+  font-family: Generica;
+  letter-spacing: .1rem;
+  font-size: 1.2rem;
+}
+
+
 .App, .App-about, App-session, .App-contact{
   padding: 2rem 4rem;
   background-color: #e9edf0;
@@ -199,6 +252,9 @@
   padding: 0 0 1rem 0;
   text-align: center;
   color: #193a5c;
+  font-size: 1.7rem;
+  font-family: TypoGrotesk;
+  
 }
 
 .App-link{
