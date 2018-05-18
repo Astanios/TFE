@@ -1,22 +1,6 @@
 @font-face {
-  font-family: ModernSans;
-  src: url(./fonts/Modern_Sans_Light.otf);
-}
-@font-face {
-  font-family: TallDark;
-  src: url(./fonts/talldark.ttf);
-}
-@font-face {
   font-family: Minimal;
   src: url(./fonts/minimal.otf);
-}
-@font-face {
-  font-family: LouisGeorge;
-  src: url(./fonts/louis_george_caf/LouisGeorgeCafe.ttf);
-}
-@font-face {
-  font-family: LouisGeorgeBold;
-  src: url(./fonts/louis_george_caf/LouisGeorgeCafeBold.ttf);
 }
 @font-face {
   font-family: Existence;
@@ -27,34 +11,32 @@
   src: url(./fonts/bebas_neue/BebasNeue-Regular.ttf);
 }
 @font-face {
-  font-family: TypoGrotesk;
-  src: url(./fonts/typo_grotesk/TypoGroteskThinDemo.otf);
-}
-@font-face {
-  font-family: TypoGrotesk;
-  src: url(./fonts/typo_grotesk/TypoGroteskThinDemo.otf);
-}
-
-@font-face {
-  font-family: Cinematografica;
-  src: url(./fonts/cinematografica/Cinematografica-Light-trial.ttf);
-}
-@font-face {
   font-family: Generica;
   src: url(./fonts/generica/Generica.otf);
 }
+@font-face {
+  font-family: Monserrat;
+  src: url(./fonts/MontserratAlternates-Regular.otf);
+}
 
 * {
-  font-family: Generica;
+  font-family: Generica;  
   letter-spacing: .1rem;
   font-size: 1.2rem;
 }
 
 
-.App, .App-about, App-session, .App-contact{
+.App, .App-about, .App-session, .App-contact{
   padding: 2rem 4rem;
-  background-color: #e9edf0;
-  height: 100%;
+  background: rgba(34,34,34,1);
+  background: -moz-linear-gradient(top, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 41%, rgba(25,58,92,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(34,34,34,1)), color-stop(41%, rgba(34,34,34,1)), color-stop(100%, rgba(25,58,92,1)));
+  background: -webkit-linear-gradient(top, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 41%, rgba(25,58,92,1) 100%);
+  background: -o-linear-gradient(top, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 41%, rgba(25,58,92,1) 100%);
+  background: -ms-linear-gradient(top, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 41%, rgba(25,58,92,1) 100%);
+  background: linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 41%, rgba(25,58,92,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#193a5c', GradientType=0 );
+  height: 100%; 
 }
 
 .App-about p{
@@ -76,9 +58,8 @@
 
 .App-upperheader {
   background-color: #222;
-  height: 2.5rem;
+  height: 10vh;
   vertical-align: middle;
-  min-height: 4.5rem;
   color: #fff;
   display: flex;
   align-content: row;
@@ -94,16 +75,15 @@
 .App-upperheader-menu{
   vertical-align: middle;
   position: relative;
-  padding-top: .5rem;
   border: 1px solid #333;
   border-radius: 0px 0 50px 50px;
-  padding: 1.5rem;
+  padding-top: 2rem;
   border-style: none;
   background-color: #193a5c;
   width: 24rem;
   display: flex;
   justify-content: space-around;
-  
+  height: 7vh;  
 }
 
 .App-upperheader-menu a{
@@ -151,7 +131,7 @@
   background-color: rgba(129, 130, 133, 0.582);
   color: #fff;
   font-weight: bold;
-  border: 2px solid #193a5c;
+  border: 3px solid #193a5c;
   border-right: none;
   padding-left: .4rem;
   font-size: 1rem;
@@ -174,7 +154,8 @@
   height: auto;
   text-transform: uppercase;
   height: 2.4rem;
-  border-radius: 0 20px 20px 0;  
+  border-radius: 0 20px 20px 0;
+  font-family: Generica;  
 }
 
 .App-welcome{  
@@ -246,6 +227,11 @@
   background-color: #dcdfe0;
   border-radius: 20px;
   margin: 2rem 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.App-text *{
+  font-family: 'Open Sans', sans-serif;  
 }
 
 .App-title{
@@ -253,8 +239,6 @@
   text-align: center;
   color: #193a5c;
   font-size: 1.7rem;
-  font-family: TypoGrotesk;
-  
 }
 
 .App-link{
@@ -270,8 +254,7 @@
 
 .App-session{
   display: flex;
-  justify-content: space-between;
-  background-color: #e9edf0 !important;  
+  justify-content: space-between; 
   padding: 4rem 4rem;
   height: 100%;
 }
@@ -307,17 +290,27 @@
 
 .App-tabs li {
   list-style-type: none;
-  color: #193a5c;
+  color: #1f466d;
   padding: .5rem;
-  font-weight: bold;
-  font-size: 1.3rem;
+  font-weight: bolder;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  
+}
+.react-tabs__tab{
+  transition: 0.2s;
+  margin: .3rem;
+  border-radius: 50px;  
+}
+
+.react-tabs__tab:hover{
+  background-color: #b5b9bb98;
+  
 }
 
 .react-tabs__tab--selected{
   background-color: #193a5c;
   color: #fff !important;
-  border-radius: 10px;
-  margin: .3rem;
 }
 @keyframes lds-spinner {
   0% {

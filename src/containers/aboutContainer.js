@@ -16,7 +16,10 @@ class contentContainer extends React.Component {
           <TabList className='App-tabs' style={{
             display: 'flex',
             justifyContent: 'space-between',
-            borderBottom: '2px solid #25345B',
+            borderBottom: '3px solid #193a5c',
+            borderTop: '3px solid #193a5c',
+            borderRadius: '50px',
+            paddingLeft: '0',
           }} >
             <Tab>
               ¿Qué es?
