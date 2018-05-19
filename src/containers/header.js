@@ -65,7 +65,7 @@ class Header extends React.Component {
 						</Link>
 					</nav>
 				</div>
-				<Motion style={{x: spring(header ? 84 : 5)}}>
+				<Motion style={{x: spring(header ? 87 : 12)}}>
 					{({x}) =>
 						<div
 							className="App-subheader"

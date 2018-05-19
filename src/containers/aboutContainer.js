@@ -34,12 +34,16 @@ class contentContainer extends React.Component {
 
           <TabPanel>
           <div className='App-text'>
-              <h2
+              <h1
                 className='App-title'
               >
                 Archivo Web de Venezuela
+              </h1>
+              <h2
+                className='App-subtitle'              
+              >
+                Bienvenido, en este portal usted podrá acceder a los sitios web que han sido archivados en el Archivo Web de Venezuela.
               </h2>
-              <p>Bienvenido, en este portal usted podrá acceder a los sitios web que han sido archivados en el Archivo Web de Venezuela</p>      
               <p>El sitio que está visitando es un sistema desarrollado en JavaScript, con las librerías React y Redux que tiene la funcionalidad de renderizar los documentos HTML que son proporcionados por una API de un sistema desarrollado con el framework Django de Python, la idea es que este se comunique con el módulo de almacenamiento así como con el módulo de indexación. el cual es una instalación de SolrCloud interactuando con otro sistema de Hadoop. La información recibida es luego procesada en este sistema a través de un módulo de NPM llamado React-render-html </p>
               <p>En un aspecto académico, el propósito de ésto es que haga la función de módulo de acceso para el primer Archivo Web de Venezuela</p>
               <h3

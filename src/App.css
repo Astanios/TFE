@@ -22,12 +22,10 @@
 * {
   font-family: Generica;  
   letter-spacing: .1rem;
-  font-size: 1.2rem;
+  font-size: 1.5vw;
 }
 
-
 .App, .App-about, .App-session, .App-contact{
-  padding: 2rem 4rem;
   background: rgba(34,34,34,1);
   background: -moz-linear-gradient(top, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 41%, rgba(25,58,92,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(34,34,34,1)), color-stop(41%, rgba(34,34,34,1)), color-stop(100%, rgba(25,58,92,1)));
@@ -36,11 +34,6 @@
   background: -ms-linear-gradient(top, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 41%, rgba(25,58,92,1) 100%);
   background: linear-gradient(to bottom, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 41%, rgba(25,58,92,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222222', endColorstr='#193a5c', GradientType=0 );
-  height: 100%; 
-}
-
-.App-about p{
-  margin: 2rem 4rem;
 }
 
 .App-logo {
@@ -58,7 +51,7 @@
 
 .App-upperheader {
   background-color: #222;
-  height: 10vh;
+  height: 13vh;
   vertical-align: middle;
   color: #fff;
   display: flex;
@@ -77,13 +70,13 @@
   position: relative;
   border: 1px solid #333;
   border-radius: 0px 0 50px 50px;
-  padding-top: 2rem;
+  padding-top: 5vh;
   border-style: none;
   background-color: #193a5c;
   width: 24rem;
   display: flex;
   justify-content: space-around;
-  height: 7vh;  
+  height: 9vh;
 }
 
 .App-upperheader-menu a{
@@ -92,7 +85,7 @@
 
 .App-upperheader-menu a:hover{
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 1.4vw;
 }
 
 .App-subheader{
@@ -101,7 +94,7 @@
   justify-content: space-around;
   bottom: 0;
   text-align: center;
-  padding: 1.5rem 4rem;
+  padding: 0 4rem;
   color: #fff;  
 }
 
@@ -126,8 +119,8 @@
 }
 
 .App-bar input{
-  width: 40rem;
-  height: 2rem;
+  width: 50vw;
+  height: 5vh;
   background-color: rgba(129, 130, 133, 0.582);
   color: #fff;
   font-weight: bold;
@@ -140,7 +133,7 @@
 }
 
 .App-logo {
-  height: 3rem;
+  height: 8vh;
   position: relative;
   float: left;
 }
@@ -153,9 +146,9 @@
   width: auto;
   height: auto;
   text-transform: uppercase;
-  height: 2.4rem;
+  height: 6vh;
   border-radius: 0 20px 20px 0;
-  font-family: Generica;  
+  font-family: Generica;
 }
 
 .App-welcome{  
@@ -171,7 +164,7 @@
   justify-content: space-around;
   color: #4d4d4d;
   background-color: #dcdfe0;
-  border-radius: 10px; 
+  border-radius: 3vh; 
   margin-top: 2rem;
 }
 
@@ -220,25 +213,18 @@
   width: 100%;
 }
 
-.App-text{
-  text-align: justify;
-  padding: 2rem 4rem;
-  color: #4d4d4d;
-  background-color: #dcdfe0;
-  border-radius: 20px;
-  margin: 2rem 0;
+.App-text *{
   font-family: 'Open Sans', sans-serif;
 }
 
-.App-text *{
-  font-family: 'Open Sans', sans-serif;  
-}
-
 .App-title{
-  padding: 0 0 1rem 0;
   text-align: center;
   color: #193a5c;
-  font-size: 1.7rem;
+  font-size: 2.5vw;
+}
+
+.App-subtitle{
+  font-size: 2vw;
 }
 
 .App-link{
@@ -246,54 +232,64 @@
   color: rgb(49, 94, 216);   
 }
 
-.App-contact{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.App-contact, .App-session{
+  min-height: 65vh;
+  position: relative;
+  justify-content: center;
+  padding: 5vh;
+}
+
+.App-about, .App-welcome{
+  padding: 4vh 8vh;
 }
 
 .App-session{
   display: flex;
-  justify-content: space-between; 
-  padding: 4rem 4rem;
-  height: 100%;
+  justify-content: space-around;
 }
 
-.App-login{
-  width: 20rem;
+.App-form , .App-login , .App-sign, .App-text{
   display: flex;
   flex-direction: column;
-  padding: 3rem;
-  color: #4d4d4d ;
-  background-color: #dcdfe0 ;
-  border-radius: 10px;
+  text-align: justify;
+  padding: 4vh 10vh;
+  color: #4d4d4d;
+  background-color: #dcdfe0;
+  border-radius: 20px;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;  
 }
 
-.App-sign{
-  width: 30rem;
-  display: flex;
-  flex-direction: column;
-  padding: 3rem;
-  color: #4d4d4d ;
-  background-color: #dcdfe0 ;
-  border-radius: 10px;
+.App-form{
+  margin: auto 0;
 }
 
-.App-login input, .App-sign input, .App-contact input{
-  margin: .5rem;
-  height: 2rem;
-  font-size: 1rem;
-  padding: 0 .5rem;
+.App-login input, .App-sign input, .App-contact input, textarea{
+  margin: 1vh;
+  height: 4vh;
+  font-size: 3vh;
+  padding: .2vh;
   border: none;
   border-bottom: 1px solid #193a5c;
+}
+
+input[type=submit]{
+  background-color: #aaabac;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+
+}
+
+textarea{
+  height: 2rem;
 }
 
 .App-tabs li {
   list-style-type: none;
   color: #1f466d;
-  padding: .5rem;
+  padding: .3vw;
   font-weight: bolder;
-  font-size: 1.7rem;
+  font-size: 2vw;
   text-transform: uppercase;
   
 }
