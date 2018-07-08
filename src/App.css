@@ -490,7 +490,6 @@ table.calendar td.bolder {
 /* Single selected day */
 table.calendar td.selected {
   background-color: orangered;
-  color: white;
   font-weight: bold;
 }
 
@@ -513,4 +512,10 @@ table.calendar td.range-right {
   border-bottom-right-radius: 15px;
   overflow: hidden;
   background: orangered;
+}
+table.calendar td.holidays {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: underline;
+  background-color: #003366;
 }

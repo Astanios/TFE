@@ -44,7 +44,6 @@ export const submit = (query) => {
 };
 
 export const submitjson = (query) => {
-  console.log(query);
   return dispatch => {
     jsontest(JSON.stringify(query)).then(
       response => {
@@ -64,7 +63,6 @@ export const submitjson = (query) => {
 };
 
 export const site = (query) => {
-  console.log(query);
   return dispatch => {
     sitereq(JSON.stringify(query)).then(
       response => {

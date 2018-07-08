@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
         query: this.refs.query.value,
         header: false,
       });
-      console.log('enter press here! ')
+      window.scrollBy(0, 800);
     }
   }
   handleSubmit = (event) => {
