@@ -11,6 +11,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
+    "notevil": "^1.1.0",
     "react": "^16.0.0",
     "react-calendar": "^2.14.0",
     "react-dom": "^16.0.0",
@@ -22,6 +23,7 @@
     "react-router-redux": "^5.0.0-alpha.8",
     "react-scripts": "0.9.5",
     "react-tabs": "^2.2.2",
+    "react-yearly-calendar": "^1.2.1",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "spawn-sync": "~1.0.15"

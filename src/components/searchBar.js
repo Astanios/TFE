@@ -6,7 +6,23 @@ import { update, submit, submitjson } from "../reducers/resultsReducer";
 import '../App.css';
 
 class SearchBar extends React.Component {
-
+  handleKeyPress = (event) => {
+    if(event.key == 'Enter'){
+      this.props.submitjson({ 'query': this.refs.query.value });
+      update({
+        query: this.refs.query.value,
+        header: false,
+      });
+      console.log('enter press here! ')
+    }
+  }
+  handleSubmit = (event) => {
+    this.props.submitjson({ 'query': this.refs.query.value });
+    update({
+      query: this.refs.query.value,
+      header: false,
+    });
+  }
   render() {
     const {
       update,
@@ -17,19 +33,14 @@ class SearchBar extends React.Component {
         <input
           type="text"
           ref="query"
+          onKeyPress={this.handleKeyPress}
         />
         <Link
           to={'/'}
         >
           <button
             type="submit"
-            onClick={() => {
-              this.props.submitjson({ 'query': this.refs.query.value });
-              update({
-                query: this.refs.query.value,
-                header: false,
-              });
-            }}
+            onClick={this.handleSubmit}
             className="App-submit"
           >
             Buscar
