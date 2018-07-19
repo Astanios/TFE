@@ -431,8 +431,39 @@ table.calendar thead {
   border-bottom: 2px solid white
 }
 
-.App-calendar{
-  
+div#calendar {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #5A5A5A;
+  background-color: white;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+div.calendar-controls {
+  margin: 5px auto;
+  display: table;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+div.calendar-controls div {
+  display: inline;
+}
+
+div.calendar-controls .current-year {
+  margin: 0 30px;
+}
+
+div.calendar-controls .control {
+  font-weight: bolder;
+  color: #323232;
+  font-size: 0.8em;
+  cursor: pointer;
 }
 table.calendar thead th {
   font-weight: normal;
